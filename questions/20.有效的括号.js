@@ -10,8 +10,22 @@
  * @return {boolean}
  */
 var isValid = function(s) {
+    // let stack = [];
+    // for(let i of s) {
+    //     let target = stack[stack.length - 1];
+    //     if ((i === ')' && target === '(') || 
+    //     (i === ']' && target === '[') ||
+    //     ((i === '}' && target === '{'))) {
+    //         stack.pop();
+    //         continue;
+    //     }
+    //     stack.push(i);
+    // }
+    // return stack.length === 0;
+
     // 由题目可以发掘我们可以利用栈的先进后出特性来解决这个问题
     // 定义一个常量记录括号的信息
+    // if (s.length % 2 !== 0) return false;
     // const mapBrackets = {
     //   '(': -1,
     //   ')': 1,
@@ -46,6 +60,7 @@ var isValid = function(s) {
             else
                 st.push(i);
     return st.length===0
+
 };
 // @lc code=end
 
